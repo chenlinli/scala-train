@@ -10,6 +10,7 @@
     <encoding>UTF-8</encoding>
     <scala.version>2.11.8</scala.version>
     <spark.version>2.2.0</spark.version>
+    <scala.big.version>2.11</scala.big.version>
     <scala.actors.version>2.11.8</scala.actors.version>
   </properties>
 
@@ -35,18 +36,19 @@
       <artifactId>scala-library</artifactId>
       <version>${scala.version}</version>
     </dependency>
-    <!--看Spark源码-->
-    <dependency>
-      <groupId>org.apache.spark</groupId>
-      <artifactId>spark-core_2.11</artifactId>
-      <version>${spark.version}</version>
-    </dependency>
 
     <dependency>
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-actors</artifactId>
       <version>${scala.actors.version}</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-core_${scala.big.version}</artifactId>
+      <version>${spark.version}</version>
+    </dependency>
+
   </dependencies>
 
   <build>
